@@ -1,0 +1,248 @@
+header {
+  @include flexbox($row, $center, $center);
+  text-align: $center;
+  padding: 1rem;
+  background-color: rgb(107, 139, 243);
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+nav {
+  width: 100%;
+  @include flexbox($row, $center, $fend);
+  background-color: rgb(107, 139, 243);
+  flex-wrap: wrap;
+  div {
+    width: 90%;
+    @media only screen and (min-width: 768px) {
+      width: 30%;
+      border-radius: 1rem;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    @include flexbox($row, $center, $center);
+    background-color: rgb(104, 111, 136);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+nav {
+  .selected {
+    background-color: rgb(144, 168, 247);
+    @media only screen and (max-width: 768px) {
+      @include order(3);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.branches {
+  @include flexbox($row, $center, $center);
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  flex-wrap: wrap;
+  div {
+    @include flexbox($row, $center, $center);
+    background-color: rgb(104, 138, 98);
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    width: 90%;
+    white-space: nowrap;
+    @media only screen and (min-width: 768px) {
+      width: auto;
+    }
+    margin: 1px;
+    user-select: none;
+    cursor: pointer;
+  }
+  div:hover {
+    background-color: rgb(84, 101, 158);
+  }
+  div:active {
+    background-color: rgb(204, 255, 203);
+  }
+  .brnch-selected {
+    background-color: rgb(84, 101, 158);
+  }
+}
+
+section {
+  padding: 2rem;
+  width: 100%;
+  @include flexbox($col, $center, $center);
+  background-color: rgb(144, 168, 247);
+  h2,
+  h3 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1;
+    color: rgb(48, 48, 48);
+    text-shadow: 1px, 1px, 1px;
+    color: white;
+  }
+  p {
+    @include flexbox($col, $center, $center);
+    width: 90%;
+    color: white;
+    @media only screen and (min-width: 768px) {
+      width: 30%;
+    }
+  }
+  .alert,
+  .board {
+    margin-top: 1rem;
+    padding: 0.2rem;
+    @include flexbox($col, $center, $center);
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+    }
+    label {
+      @include flexbox($col, $center, $center);
+      width: 90%;
+      @media only screen and (min-width: 768px) {
+        width: 60%;
+      }
+      background-color: rgb(104, 138, 98);
+      color: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      input,
+      select,
+      span {
+        width: 100%;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        border: none;
+      }
+      input,
+      select {
+        background-color: rgb(204, 255, 203);
+      }
+    }
+  }
+  div.label {
+    @include flexbox($row, $sbetween, $center);
+    width: 90%;
+    @media only screen and (min-width: 768px) {
+      width: 30%;
+    }
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: rgb(84, 101, 158);
+    #openFormulaToAddNewUnit {
+      padding: 1rem;
+      margin: 0;
+      white-space: nowrap;
+      width: auto;
+    }
+  }
+  div.btn {
+    @include flexbox($col, $center, $center);
+    width: 90%;
+    @media only screen and (min-width: 768px) {
+      width: 60%;
+    }
+    padding: 0.6rem;
+    background-color: rgb(84, 101, 158);
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .back {
+    @include flexbox($col, $center, $center);
+    width: 40%;
+    @media only screen and (min-width: 768px) {
+      width: auto;
+    }
+    padding: 1rem;
+    white-space: nowrap;
+    background-color: rgb(84, 101, 158);
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  div.btn:hover,
+  .back:hover {
+    background-color: rgb(104, 138, 98);
+  }
+  div.btn:active,
+  .back:active {
+    background-color: rgb(204, 255, 203);
+  }
+}
+
+section:nth-of-type(2) {
+  .hide-show-area {
+    width: 100%;
+    @include flexbox($col, $center, $center);
+  }
+  .output {
+    border: solid 1px rgb(84, 101, 158);
+    color: rgb(84, 101, 158);
+    background: none;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    width: 90%;
+    @media only screen and (min-width: 768px) {
+      width: 30%;
+    }
+  }
+}
+
+.red-alert {
+  background-color: rgb(248, 66, 66);
+}
+
+.alert_p {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.green-alert {
+  background-color: rgb(0, 163, 54);
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.displayNone {
+  display: none;
+}
+
+.rolltop {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+footer {
+  @include flexbox($row, $center, $center);
+  text-align: $center;
+  padding: 2rem;
+  background-color: rgb(107, 139, 243);
+  color: white;
+  letter-spacing: 0.1rem;
+}

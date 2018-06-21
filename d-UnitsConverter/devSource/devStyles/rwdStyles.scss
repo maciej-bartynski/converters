@@ -1,0 +1,41 @@
+$col: column;
+$row: row;
+$fstart: flex-start;
+$center: center;
+$fend: flex-end;
+$sbetween: space-between;
+$saround: space-around;
+
+@mixin flexbox ($dir, $justify, $align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin order ($num) {
+    order: $num;
+}
+
+body {
+    margin: 0 0 0 0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    font-size: 13px;
+    @media only screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+    @media only screen and (min-width: 992px) {
+        font-size: 15px;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 16px;
+    }
+}

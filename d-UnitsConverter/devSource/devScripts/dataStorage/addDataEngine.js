@@ -1,0 +1,2 @@
+let totalObject = {};
+export {totalObject};
